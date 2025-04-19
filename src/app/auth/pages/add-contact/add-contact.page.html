@@ -1,0 +1,15 @@
+<form (ngSubmit)="addContact()">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="fullName" name="fullName" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Teléfono</ion-label>
+    <ion-input type="tel" [(ngModel)]="phone" name="phone" required></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="primary" type="submit" [disabled]="!fullName || !phone">
+    Agregar Contacto
+  </ion-button>
+</form>
