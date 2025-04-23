@@ -1,0 +1,18 @@
+ion-header {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+ion-toolbar {
+  --background: #007aff;
+}
+
+ion-list {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  ion-button {
+    font-size: 14px;
+  }
+}
