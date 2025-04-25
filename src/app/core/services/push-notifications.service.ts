@@ -4,10 +4,9 @@ import { FirestoreService } from './firestore.service';
 import { AuthService } from './auth.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class PushNotificationsService { 
-
+export class PushNotificationsService {
   constructor(private firestoreService: FirestoreService, private authService: AuthService) {}
 
   async initPush() {
@@ -16,11 +15,10 @@ export class PushNotificationsService {
     if (permission.receive === 'granted') {
       await PushNotifications.register();
 
-PushNotifications.addListener('registration', (token: Token) => {
-  console.log('Token FCM registrado:', token.value);
-  alert('Token FCM registrado:\n' + token.value); // 🔥 Agregamos alert
-  this.saveFCMToken(token.value);
-});
+      PushNotifications.addListener('registration', (token: Token) => {
+        console.log('Token FCM registrado:', token.value);
+        this.saveFCMToken(token.value);
+      });
 
       PushNotifications.addListener('pushNotificationReceived', (notification) => {
         console.log('Notificación recibida:', notification);
@@ -33,7 +31,9 @@ PushNotifications.addListener('registration', (token: Token) => {
   private saveFCMToken(token: string) {
     const user = this.authService.getUser();
     if (user) {
-      this.firestoreService.updateUserToken(user.uid, token);
+      this.firestoreService.updateUserToken(user.uid, token).subscribe({
+        error: (err) => console.error('Error al guardar token:', err),
+      });
     }
   }
 }

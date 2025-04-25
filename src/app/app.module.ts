@@ -8,10 +8,10 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';  // Esto debe estar correctamente importado
+import { provideFirestore, getFirestore } from '@angular/fire/firestore'; 
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { FirestoreModule } from '@angular/fire/firestore';  // Esto es lo importante
+import { FirestoreModule } from '@angular/fire/firestore';  
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,13 +22,13 @@ import { FirestoreModule } from '@angular/fire/firestore';  // Esto es lo import
     CoreModule,
     SharedModule,
     HttpClientModule,
-    FirestoreModule,  // Importa AngularFirestoreModule
+    FirestoreModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),  // Asegúrate de que este proveedor esté en la lista
+    provideFirestore(() => getFirestore()),
   ],
   bootstrap: [AppComponent],
 })

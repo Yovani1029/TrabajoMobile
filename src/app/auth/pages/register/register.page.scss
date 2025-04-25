@@ -1,0 +1,34 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // Espaciado entre elementos del formulario
+  }
+  
+  ion-item {
+    --background: #f9f9f9; // Fondo claro para el input
+    border-radius: 10px; // Esquinas redondeadas
+    margin-bottom: 12px; // Espaciado entre los campos
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    --background: #3880ff; // Color azul para el botón
+  }
+  
+  .link-container {
+    text-align: center;
+    margin-top: 24px;
+  
+    a {
+      font-size: 14px;
+      color: #3880ff; // Azul para el enlace
+      text-decoration: underline;
+    }
+  }
+  
+  ion-toolbar {
+    --background: #3880ff; // Color primario para la barra superior
+    --color: #fff; // Color blanco para el texto del título
+  }

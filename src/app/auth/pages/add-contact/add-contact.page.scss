@@ -1,0 +1,32 @@
+.add-contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; // Espaciado entre los elementos del formulario
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px; // Ancho máximo en pantallas grandes
+    margin-top: 20px;
+  }
+  
+  ion-item {
+    --background: #f9f9f9; // Fondo claro para los campos
+    border-radius: 10px; // Bordes redondeados para un diseño moderno
+    margin-bottom: 16px; // Espaciado entre los campos
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    --background: #3880ff; // Color atractivo para el botón
+    border-radius: 12px; // Bordes redondeados para el botón
+  }
+  
+  ion-toolbar {
+    --background: #3880ff; // Color azul en el encabezado
+    --color: #fff; // Texto blanco en el encabezado
+  }

@@ -1,0 +1,36 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; // Ocupa toda la pantalla
+    padding: 20px;
+  }
+  
+  form {
+    width: 100%; // Hace que el formulario se adapte al contenedor
+    max-width: 400px; // Ancho máximo para dispositivos más grandes
+  }
+  
+  ion-item {
+    --background: #f9f9f9; // Fondo claro para los inputs
+    border-radius: 10px;
+    margin-bottom: 16px; // Espaciado entre campos
+  }
+  
+  ion-button {
+    --background: #3880ff; // Botón azul llamativo
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  a {
+    font-size: 14px;
+    color: #3880ff;
+    text-decoration: underline;
+  }
+  
+  ion-toolbar {
+    --background: #3880ff; // Color azul en la barra superior
+    --color: #fff; // Texto blanco
+  }
